@@ -1,3 +1,5 @@
+<?php
+
 /* Licensed under the Apache License, Version 2.0 (the "License"); you may not use
  * this file except in compliance with the License. You may obtain a copy of the
  * License at
@@ -7,7 +9,7 @@
  * CONDITIONS OF ANY KIND, either express or implied. See the License for the specific
  * language governing permissions and limitations under the License.
  */
-"use strict";
-new ProxyEdicion("Contacto", "rest/contactoBusca.php", "rest/contactoAgrega.php",
-    "rest/contactoModifica.php", "rest/contactoElimina.php");
+$usuario = "root";
+$contrasenha = "";
+$gbd = new PDO('mysql:host=localhost;dbname=dstaka', $usuario, $contrasenha);
 

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="format-detection" content="telephone=no" />
+    <!-- Required meta viewport tag. Do not modify this! -->
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1,
+          minimum-scale=1, width=device-width" />
+     <link rel="shortcut icon" sizes="48x48" href="imagenes/ico.png">
+    <!-- "Add to homescreen" support -->
+    <meta name="mobile-web-app-capable" content="yes">
+    <title id="titulo">Clientes</title>
+    <script src="js/libs/proxyEdicion.js"></script>
+    <script src="js/libs/agregaEvento.js"></script>
+    <script src="js/libs/evento.js"></script>
+    <script src="js/libs/codificaHtml.js"></script>
+    <script src="js/libs/ctrlError.js"></script>
+    <script src="js/libs/ctrlEdicion.js"></script>
+    <script src="js/libs/proxyComun.js"></script>
+    <script src="js/libs/webcomponentsjs/webcomponents-loader.js"></script>
+    <script src="js/libs/require.js/require.min.js"></script>
+    <script src="js/libs/Util.js"></script>
+    <link rel="import" href="cmp/formas-navegacion.html">
+    <link rel="stylesheet" href="css/estilos.css">
+    <link rel="stylesheet" href="css/Registro.css">
+    <link rel="stylesheet" href="css/Header.css">  
+  </head>
+  <body>
+      <formas-navegacion></formas-navegacion>
+      
+      <h1 id="h1" class="title">Registra Cliente</h1>
+    <div class="page" style="max-width:500px; margin:auto">
+        <div class="input-container">
+        <form id="forma" class="inset" action="">
+            <br>
+          <label class="block-label">Nombre</label>
+          <input id="nombre" type="text" placeholder="Nombre" class="input-field" required>
+          <br>
+          <label class="block-label">telefono</label>
+          <input id="telefono" type="text" placeholder="telefono"
+                 class="input-field" required>
+          <br>
+          <label class="block-label">email</label>
+          <input id="email" type="email" placeholder="email" class="input-field" required>
+          <div class="form-actions">
+              <br>
+            <input type="submit" class="btn btn-block" value="Guardar">
+          </div>
+          <div class="form-actions">
+              <br>
+              <input type="button" id="eliminar" class="btn btn-block" formaction="javascript:;" value="Eliminar">
+          </div>
+          <br>
+          <br>
+        </form>
+      </div>
+      <div class="dialogs">
+        <!-- This is a requried container for your dialogs. All dialogs that you want to display in this page go here -->
+      </div>
+    </div>
+    <!-- Scripts at the bottom -->
+    <script src="js/ctrlCliente.js"></script>
+    <script src="js/proxyCliente.js"></script>
+  </body>
+</html>

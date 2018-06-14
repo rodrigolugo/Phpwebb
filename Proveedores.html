@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="format-detection" content="telephone=no" />
+    <!-- Required meta viewport tag. Do not modify this! -->
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1,
+          minimum-scale=1, width=device-width" />
+    <!-- "Add to homescreen" support -->
+    <meta name="mobile-web-app-capable" content="yes">
+    <title>Proveedores</title>
+    <link rel="shortcut icon" sizes="48x48" href="imagenes/ico.png">
+    <script src="js/libs/codificaHtml.js"></script>
+    <script src="js/libs/lista.js"></script>
+    <script src="js/libs/columnas.js"></script>
+    <script src="js/libs/evento.js"></script>
+    <script src="js/libs/ctrlError.js"></script>
+    <script src="js/libs/ctrlListado.js"></script>
+    <script src="js/libs/proxyComun.js"></script>
+    <script src="js/libs/proxyListado.js"></script>
+    <script src="js/libs/webcomponentsjs/webcomponents-loader.js"></script>
+    <script src="js/libs/require.js/require.min.js"></script>
+    <script src="js/libs/Util.js"></script>
+    <link rel="import" href="cmp/formas-navegacion.html">
+    <link rel="stylesheet" href="css/estilos.css">
+    <link rel="stylesheet" href="css/lists.css">
+    <link rel="stylesheet" href="css/Header.css">
+    <link rel="stylesheet" href="css/Registro.css">
+  </head>
+  <body>
+    <formas-navegacion></formas-navegacion>
+    <div class="page" >
+      <header class="action-bar fixed-top">
+        <h1 class="title">Contactos</h1>
+        
+        <a href="Proveedor.html" class="btn btn-block" style="max-width:200px; margin:auto">
+             <input type="button" class="btn btn-block" value="Agregar">
+        </a>
+        <br>
+        <br>
+        <!-- Add action buttons here -->
+      </header>
+      <div class="content" style="max-width:900px; margin:auto">
+        <div class="inset">
+          <ul id="listado"></ul>
+        </div>
+      </div>
+      <div class="dialogs">
+        <!-- This is a requried container for your dialogs. All dialogs that you want to display in this page go here -->
+      </div>
+
+    </div>
+
+    <!-- Scripts at the bottom -->
+    <!--<script src="js/libs/fries/fries.min.js"></script>-->
+    <!-- Use fingerblast when testing on the browser -->
+    <!--    <script src="js/libs/fingerblast.js"></script>
+        <script src="js/libs/example.js"></script>-->
+    <script src="js/ctrlProveedores.js"></script>
+    <script src="js/proxyProveedores.js"></script>
+  </body>
+</html>

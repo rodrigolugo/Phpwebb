@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="format-detection" content="telephone=no" />
+    <!-- Required meta viewport tag. Do not modify this! -->
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1,
+          minimum-scale=1, width=device-width" />
+    <!-- "Add to homescreen" support -->
+    <meta name="mobile-web-app-capable" content="yes">
+    <title id="titulo">Contactos</title>
+    <link rel="shortcut icon" sizes="48x48" href="imagenes/ico.png">
+    <script src="js/libs/agregaEvento.js"></script>
+    <script src="js/libs/evento.js"></script>
+    <script src="js/libs/ctrlError.js"></script>
+    <script src="js/libs/ctrlEdicion.js"></script>
+    <script src="js/libs/proxyComun.js"></script>
+    <script src="js/libs/proxyEdicion.js"></script>
+    <script src="js/libs/webcomponentsjs/webcomponents-loader.js"></script>
+    <script src="js/libs/require.js/require.min.js"></script>
+    <script src="js/libs/Util.js"></script>
+    <link rel="import" href="cmp/formas-navegacion.html">
+    <link rel="stylesheet" href="css/estilos.css">
+    <link rel="stylesheet" href="css/Registro.css">
+    <link rel="stylesheet" href="css/Header.css">
+     <link rel="stylesheet" href="css/icomoon.css">
+    
+  </head>
+  <body>
+      <formas-navegacion></formas-navegacion>
+      
+      
+    <div class="page" >
+        <h1 id="h1" class="title">Registra Proveedor</h1>
+        <div class="input-container" style="max-width:300px; margin-left: 450px">
+        <form id="forma" class="inset" action="">
+          <br>
+          <label class="block-label">Nombre</label>
+          <input id="nombre" type="text" placeholder="Nombre" class="input-field" required>
+          <label class="block-label">Dirección</label>
+          <input id="direccion" type="text" placeholder="Dirección"
+                 class="input-field" required>
+          <label class="block-label">Teléfono</label>
+          <input id="telefono" type="tel" placeholder="Teléfono" class="input-field" required>
+          <div class="form-actions">
+              <br>
+            <input type="submit" class="btn btn-block" value="Guardar">
+          </div>
+          <div class="form-actions">
+              <br>
+              <input type="button" id="eliminar" class="btn btn-block" formaction="javascript:;" value="Eliminar">
+          </div>
+          <br>
+          <br>
+        </form>
+      </div>
+      <div class="dialogs">
+        <!-- This is a requried container for your dialogs. All dialogs that you want to display in this page go here -->
+      </div>
+    </div>
+    <!-- Scripts at the bottom -->
+    <script src="js/ctrlProveedor.js"></script>
+    <script src="js/proxyProveedor.js"></script>
+  </body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Inventario</title>
+        <meta charset="UTF-8">
+        <link rel="shortcut icon" sizes="48x48" href="imagenes/ico.png">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="js/libs/webcomponentsjs/webcomponents-loader.js"></script>
+        <script src="js/libs/require.js/require.min.js"></script>
+        <script src="js/libs/Util.js"></script>
+        <link rel="import" href="cmp/formas-navegacion.html">
+        <link rel="stylesheet" href="css/estilos.css">
+        <link rel="stylesheet" href="css/Registro.css">
+        <link rel="stylesheet" href="css/Header.css">
+    </head>
+    <body>
+        <formas-navegacion></formas-navegacion>
+        <form id="forma" action="javascript:;" style="margin-left: 600px">
+            <br><br>
+          <label accesskey="A">
+          Modelo<br>
+          <!-- Lista donde se puede seleccionar una opción. -->
+          <select name="zapato" required size="4" class="input-field" 
+                  style="background-color: #333; color: white">
+              <option value="pharrel">Pharrel Williams</option>
+            <option value="yeezy">Yeezy boost</option>
+            <option value="retro">Nike Retro</option>
+            <option value="vans">Vans</option>
+          </select>
+        </label>
+            <p><output id="salida"></output></p><br><br>
+        </form>
+        <script src="js/almacen.js"></script>
+    </body>
+</html>

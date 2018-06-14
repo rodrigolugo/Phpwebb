@@ -1,0 +1,38 @@
+{
+  "name": "PhpProject2",
+  "icons": [
+    {
+      "src": "img/form_16px.png",
+      "sizes": "16x16",
+      "type": "image/png",
+      "density": "1.0"
+    },
+    {
+      "src": "img/form_24px.png",
+      "sizes": "24x24",
+      "type": "image/png",
+      "density": "1.5"
+    },
+    {
+      "src": "img/form_32px.png",
+      "sizes": "32x32",
+      "type": "image/png",
+      "density": "2.0"
+    },
+    {
+      "src": "img/form_64px.png",
+      "sizes": "64x4",
+      "type": "image/png",
+      "density": "4.0"
+    },
+    {
+      "src": "img/form_128px.png",
+      "sizes": "128x128",
+      "type": "image/png",
+      "density": "8.0"
+    }
+  ],
+  "start_url": "PhpProject2/index.html",
+  "display": "standalone",
+  "orientation": "portrait"
+}

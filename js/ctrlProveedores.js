@@ -8,7 +8,7 @@
  * language governing permissions and limitations under the License. */
 "use strict";
 var NOMBRE = "nombre", TELEFONO = "telefono", DIRECCION = "direccion";
-var columnas = [new ColumnaAncla("contacto.html", "id", "nombre"),
+var columnas = [new ColumnaAncla("Proveedor.html", "id", "nombre"),
   new ColumnaAnclaTelefono("Teléfono", "telefono")];
 var lista = new Lista("listado", "", "No hay contactos registrados.", columnas);
-new CtrlListado("Contacto", lista);
+new CtrlListado("Proveedor", lista);

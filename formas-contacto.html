@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Contacto</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="shortcut icon" sizes="48x48" href="imagenes/ico.png">
+        <script src="js/libs/webcomponentsjs/webcomponents-loader.js"></script>
+        <script src="js/libs/require.js/require.min.js"></script>
+        <script src="js/libs/Util.js"></script>
+        <link rel="import" href="cmp/formas-navegacion.html">
+        <link rel="import" href="cmp/formas-redes.html">
+        <link rel="stylesheet" href="css/estilos.css">
+        <link rel="stylesheet" href="css/Registro.css">
+        <link rel="stylesheet" href="css/Header.css">
+    </head>
+    <body>
+        <formas-navegacion></formas-navegacion>
+        <h1>Encuéntranos</h1>
+        <div id="map" style="width:30%;height:300px; align-items: left"></div>
+        <br>
+        <br>
+        <formas-redes></formas-redes>        
+        <script>
+            function myMap() {
+              var mapCanvas = document.getElementById("map");
+              var mapOptions = { center: new google.maps.LatLng(19.437104, -99.117383), zoom: 100};
+              var map = new google.maps.Map(mapCanvas, mapOptions); }
+        </script>
+        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA5n_wmO3jsThb0cZrBA949elq9som0G0g&callback=myMap"></script>
+    </body>
+</html>
