@@ -1,4 +1,4 @@
-z<!DOCTYPE html>
+<!DOCTYPE html>
 <!--
 To change this license header, choose License Headers in Project Properties.
 To change this template file, choose Tools | Templates
@@ -30,8 +30,6 @@ and open the template in the editor.
         <script src="js/libs/require.js/require.min.js"></script>
         <script src="js/libs/Util.js"></script>
         <link rel="import" href="cmp/formas-navegacion.html">
-        <link rel="import" href="cmp/galeria.html">
-         <link rel="import" href="cmp/formas-footer.html">
         <link rel="stylesheet" href="css/estilos.css">
         <link rel="stylesheet" href="css/Header.css">
         <script src="js/libs/codificaHtml.js"></script>
@@ -46,24 +44,40 @@ and open the template in the editor.
         <link rel="stylesheet" href="css/estilos.css">
         <link rel="stylesheet" href="css/Registro.css">
         <link rel="stylesheet" href="css/Header.css">
-        <title>Dstaka</title>
+        <title>Phpwebb</title>
     </head>
     <body>
-        <formas-navegacion></formas-navegacion>
-        <div>
-            <forma-galeria></forma-galeria>
-            <main role="main"></main>
-        </div>
-               <formas-footer></formas-footer>
-    </template>
-        <script>
+    <div>
+      <formas-navegacion></formas-navegacion>
+      <main role="main"></main>
+    </div>
+  <script>
     "use strict";
     document.addEventListener("WebComponentsReady", () => {
       const main = document.querySelector("main");
       window.addEventListener("hashchange", cambioDeHash);
       cambioDeHash();
+      function cambioDeHash() {
+        main.innerHTML = "";
+        const hash = location.hash;
+        switch (hash) {
+          case "":
+          case "#":
+          default :
+            main.appendChild(document.createElement("formas-selecciona-cigarro"));
+            break;
 
+          case "#formas-selecciona-cigarro":
+          case "#formas-inicio":
+          case "#formas-registro":
+          case "#formas-consulta":
+            main.appendChild(document.createElement(hash.substring(1)));
+        }
+      }
     });
   </script>
+    <footer>
+            Copyright EquipoDinamita 2018 &copy;
+    </footer>
     </body>
 </html>

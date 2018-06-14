@@ -1,5 +1,5 @@
 {
-  "name": "PhpProject2",
+  "name": "Phpwebb",
   "icons": [
     {
       "src": "img/form_16px.png",
@@ -32,7 +32,7 @@
       "density": "8.0"
     }
   ],
-  "start_url": "PhpProject2/index.html",
+  "start_url": "Phpwebb/index.html",
   "display": "standalone",
   "orientation": "portrait"
 }

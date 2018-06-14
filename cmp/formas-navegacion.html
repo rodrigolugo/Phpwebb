@@ -18,23 +18,47 @@ limitations under the License.
   <head>
     <meta charset="UTF-8">
     <title>Barra de Navegación</title>
-    <link rel="import" href="galeria.html">
-    <link rel="import" href="formas-contacto.html">
-
+    <link rel="import" href="formas-registro.html">
+    <link rel="import" href="formas-inicio.html">
+    <link rel="import" href="formas-selecciona-cigarro.html">
+    <link rel="import" href="formas-consulta.html"
+          <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+   
   </head>
   <body>
     <template>
-        <div class="topnav">
-                <a class="active" href="index.html">Inicio</a>
-                <a href="clientes.html">Clientes</a>
-                <a href="inventario.html">inventario</a>
-                <a href="Proveedores.html">Proveedores</a>
-                <a href="formas-contacto.html">Contacto</a>
-            </div>
+     <div class="container">
+         <br>
+         <header>
+             <nav class="navbar navbar-default">
+                 <div class="container-fluid">
+                     <div class="navbar-header">
+                         <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-1">
+                             <span class="sr-only">Menu</span>
+                             <span class="icon-bar"></span>
+                             <span class="icon-bar"></span>
+                             <span class="icon-bar"></span>
+                         </button> 
+                         <a href="#" class="navbar-brand">Bienvenidos</a>
+                     </div>
+                     <div class="collapse navbar-collapse" id="navbar-1">
+                         <ul class="nav navbar-nav">
+                             <li><a href="#formas-registro">Registrarse</a></li>  
+                             <li><a href="#formas-inicio">Inicio de sesion</a></li>
+                             <li><a href="#formas-selecciona-cigarro">Selecciona Cigarro</a></li>
+                             <li><a href="#formas-consulta">Consulta</a></li>
+                          </ul>
+                     </div>
+                 </div>
+             </nav>
+         </header>
+     </div>
     </template>
     <script>
       "use strict";
       Util.registraElementSimple("formas-navegacion");
     </script>
+    <script src="https://code.jquery.com/jquery-latest.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
   </body>
 </html>

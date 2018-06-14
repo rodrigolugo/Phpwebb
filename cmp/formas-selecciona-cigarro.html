@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Selecciona Cigarro</title>
+     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" >
+  </head>
+  <body>
+    <template>
+      
+      <form name="forma" action="javascript:;">
+        <h1>Comprar Cigarro</h1>
+        <fieldset>
+          <legend>¿Qúe cigarro deseas comprar?</legend>
+          <div class="form-group">
+          <label accesskey="S">
+            <input class="form-control" id="cigarro1" name="cigarro" type="checkbox" value="Cigarro 1">
+            Cigarro 1 &nbsp; &nbsp; $200.00
+          </label>
+          </div>
+           <div class="form-group">
+          <label accesskey="M">
+              <input class="form-control" id="cigarro2" name="cigarro" type="checkbox" value="Cigarro 2">
+            Cigarro 2 &nbsp; &nbsp; $349.00
+          </label>
+           </div>
+           <div class="form-group">
+          <label accesskey="D">
+              <input class="form-control" id="cigarro3" name="cigarro" type="checkbox" value="Cigarro 3"
+                   checked>
+            Cigarro 3 &nbsp; &nbsp; $700.00
+          </label>
+           </div>
+           <div class="form-group">
+          <label accesskey="R">
+            <input class="form-control" id="cigarro4" name="cigarro" type="checkbox" value="Cigarro 4">
+            Cigarro 4 &nbsp; &nbsp; $230.00
+          </label>
+            </div>
+        </fieldset>
+        <input type="button" class="btn btn-primary" value="Ok" onclick="alerta()">
+        <p><output name="salidaCigarros"></output></p>
+      </form>
+    
+    </template>
+    <script>
+      "use strict";
+      (() => {
+        const template = Util.elementPrevio();
+        Util.registraElement("formas-selecciona-cigarro",
+            class extends HTMLElement {
+          connectedCallback() {
+            Util.agregaTemplate(this, template);
+            document.forma
+                .addEventListener("click", () => this.validaCigarro());
+          }
+          validaCigarro() {
+            var seleccion = Array.prototype.map.call(
+                this.querySelectorAll("[name='cigarro']:checked"),
+                checkbox => checkbox.value);
+            document.forma.salidaCigarros.value = seleccion.join(", ")
+                + ". "
+          }
+        });
+      })();
+    </script>
+    <script src="js/jquery.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  </body>
+</html>

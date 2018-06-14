@@ -39,23 +39,40 @@
         <link rel="stylesheet" href="css/estilos.css">
         <link rel="stylesheet" href="css/Registro.css">
         <link rel="stylesheet" href="css/Header.css">
-        <title>Dstaka</title>
+        <title>Phpwebb</title>
     </head>
     <body>
-          <formas-navegacion></formas-navegacion>
-         
-        <div>
-            <galeria></galeria>
-            <main role="main"></main>
-        </div>
-          <formas-footer></formas-footer>
-          <script>
+          <div>
+      <formas-navegacion></formas-navegacion>
+      <main role="main"></main>
+    </div>
+  <script>
     "use strict";
     document.addEventListener("WebComponentsReady", () => {
       const main = document.querySelector("main");
       window.addEventListener("hashchange", cambioDeHash);
       cambioDeHash();
+      function cambioDeHash() {
+        main.innerHTML = "";
+        const hash = location.hash;
+        switch (hash) {
+          case "":
+          case "#":
+          default :
+            main.appendChild(document.createElement("formas-selecciona-cigarro"));
+            break;
+
+          case "#formas-selecciona-cigarro":
+          case "#formas-inicio":
+          case "#formas-registro":
+          case "#formas-consulta":
+            main.appendChild(document.createElement(hash.substring(1)));
+        }
+      }
     });
   </script>
+    <footer>
+            Copyright EquipoDinamita 2018 &copy;
+    </footer>
     </body>
 </html>

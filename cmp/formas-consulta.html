@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" >
+    </head>
+    <body>
+        <template>
+        <form name="forma" action="javascript:;">
+            <h1>Buscar</h1>
+            <fieldset>
+                <legend>Ingrese el correo a buscar:</legend>
+                
+                <label accesskey="C">
+                        Correo Electronico:
+                        <input class="form-control" id="correo_registro" type="text" size="33" maxlength="30" required>
+                </label>        
+                 <button class="btn btn-primary">Actualizar</button>
+                 <input type="button" class="btn btn-primary" value="Buscar">
+                 <input type="button" class="btn btn-primary" value="Eliminar">
+                 <div id="result"></div>
+            </fieldset>
+        </form>
+        </template>
+        <script>
+        "use strict";
+      (() => {
+        const template = Util.elementPrevio();
+        Util.registraElement("formas-consulta", class extends HTMLElement {
+          connectedCallback() {
+            Util.agregaTemplate(this, template);
+          }
+        });
+      })();    
+        </script>
+    </body>
+</html>
