@@ -1,0 +1,76 @@
+/*
+Copyright 2018 Ricardo Armando Machorro Reyes
+
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+
+     http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+*/
+/* 
+    Created on : 15/01/2018, 08:41:03 AM
+    Author     : Ricardo Armando Machorro Reyes
+*/
+body {
+  font-family: sans-serif;
+  margin: auto;
+  background-color: #03826B;
+
+}
+body > div {
+  margin: auto;
+}
+main {
+  margin: 0;
+       text-align: center;
+}
+fieldset label {display: block}
+p label, legend {font-weight: bold}
+p label span, p em, p output {display: block}
+p label input[type="checkbox"], p label input[type="range"] {
+  display: inline;
+       text-align: center;
+}
+p em {font-size: small}
+hr + p {text-align: center}
+[type="button"] {
+  border: thin solid gray;
+  background-color: white;
+       text-align: center;
+}
+formas-footer {
+  display: block;
+  padding: 1em;
+  text-align: center;
+}
+dialogo-especial {
+  /* Cubre toda la ventana. */
+  position: absolute;
+  z-index: 12;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  text-align: center;
+  /* Color de fondo. Si no se pone, es transparente. */
+  background-color: rgba(125,125,125,0.5);
+  display: none;
+}
+dialogo-especial > form { /* Parte interna del diálogo. */
+  position: absolute;
+  z-index: 13;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); /* centra en pantalla. */
+  padding: 2em 1em 0 1em; /* Relleno vertical y horizontal. */
+  background-color: white;
+  /* Sombra negra y 8 pixeles de difuminado. */
+  box-shadow: 0 0 8px black;
+  text-align: center;
+}

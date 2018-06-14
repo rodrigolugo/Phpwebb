@@ -1,0 +1,44 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 29/05/2018, 08:58:19 PM
+    Author     : Ever Hernández
+*/
+ .topnav
+            {
+                overflow: hidden;
+                background-color: #333;
+                font-family: Helvetica, sans-serif;
+                
+            }
+
+            .topnav a 
+            {
+                float: left;
+                color: #f2f2f2;
+                text-align: center;
+                padding: 14px 16px;
+                text-decoration: none;
+                font-size: 17px;
+                font-family: Helvetica, sans-serif;
+            }
+
+            .topnav a:hover 
+            {
+                background-color: #ddd;
+                color: black;
+                font-family: Helvetica, sans-serif;
+            }
+
+            .topnav a.active 
+            {
+                background-color: #03826B;
+                color: white;
+                font-family: Helvetica, sans-serif;
+            }
+
+            footer {font-size: small} 
+
